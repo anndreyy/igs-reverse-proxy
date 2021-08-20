@@ -1,7 +1,7 @@
 const express = require('express')
 var bodyParser = require('body-parser')
 const app = express()
-const port = 3000
+const port = 3001
 var url = require('url');
 
 // parse application/json
@@ -9,6 +9,7 @@ app.use(express.json())
 
 
 app.use(function (req, res, next) {
+  console.log("hom");
     // escrever na BD
     console.log('url', req.url);   
     var requrl = url.format({

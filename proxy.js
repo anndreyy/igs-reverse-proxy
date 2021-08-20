@@ -6,7 +6,7 @@ const options = {
   target: 'http://localhost:0000', // target host
   changeOrigin: true, // needed for virtual hosted sites
   pathRewrite: function (path, req) {
-      return path.replace('/api', '/') 
+      return path.replace('/api', '') 
     },
     router: {
         'dev.planominhacasa.com.br' : 'http://localhost:3000',  // host only
