@@ -5,14 +5,14 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const options = {
   target: 'http://localhost:0000', // target host
   changeOrigin: true, // needed for virtual hosted sites
-  pathRewrite: function (path, req) {
-      return path.replace('/api', '') 
-    },
-    router: {
-        'dev.planominhacasa.com.br' : 'http://localhost:3000',  // host only
-        'hom.planominhacasa.com.br' : 'http://localhost:3001',  // host only
-        'planominhacasa.com.br' : 'http://localhost:3002',  // host only
-    }
+  // pathRewrite: function (path, req) {
+  //     return path.replace('/api', '') 
+  //   },
+  router: {
+      'api.dev.planominhacasa.com.br' : 'http://localhost:3000',  // host only
+      'api.hom.planominhacasa.com.br' : 'http://localhost:3001',  // host only
+      'api.planominhacasa.com.br' : 'http://localhost:3002',  // host only
+  }
 };
 
 // create the proxy (without context)
