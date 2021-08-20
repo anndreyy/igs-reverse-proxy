@@ -9,7 +9,9 @@ const options = {
       return path.replace('/api', '/') 
     },
     router: {
-        'localhost:5000' : 'http://localhost:3000',  // host only
+        'dev.planominhacasa.com.br' : 'http://localhost:3000',  // host only
+        'hom.planominhacasa.com.br' : 'http://localhost:3001',  // host only
+        'planominhacasa.com.br' : 'http://localhost:3002',  // host only
     }
 };
 
